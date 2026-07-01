@@ -3543,9 +3543,9 @@ function animate(){
 
 
 // ── MISSION SELECT BUTTONS ──
-document.querySelectorAll('.mission-btn').forEach(function(btn){
+document.querySelectorAll('#mission-select .mission-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
-    document.querySelectorAll('.mission-btn').forEach(function(b){b.classList.remove('selected');});
+    document.querySelectorAll('#mission-select .mission-btn').forEach(function(b){ b.classList.remove('selected'); });
     btn.classList.add('selected');
     var dm = btn.getAttribute('data-mission');
     if(dm === 'endless'){ endlessMode = true; currentMission = 1; }
